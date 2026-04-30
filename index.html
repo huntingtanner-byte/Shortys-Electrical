@@ -78,7 +78,7 @@
     justify-content: center;
   }
   .nav__brand img {
-    height: 56px;
+    height: 80px;
     width: auto;
   }
 
@@ -105,7 +105,7 @@
     .nav__left { display: none; }
     .nav__right > a:not(.nav__cta) { display: none; }
     .nav__burger { display: block; justify-self: start; }
-    .nav__brand img { height: 44px; }
+    .nav__brand img { height: 60px; }
     .nav__cta { padding: 10px 18px; font-size: 12px; }
   }
 
@@ -908,21 +908,11 @@
   @media (max-width: 520px) { .footer__grid { grid-template-columns: 1fr; } }
 
   .footer__brand {
-    font-family: 'Caveat Brush', cursive;
-    font-size: 56px;
-    color: var(--blue);
-    line-height: 1;
-    position: relative;
-    display: inline-block;
+    display: block;
   }
-  .footer__tag {
-    font-family: 'Big Shoulders Display', sans-serif;
-    font-weight: 800;
-    font-size: 12px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--navy);
-    margin-top: 4px;
+  .footer__brand img {
+    height: 100px;
+    width: auto;
   }
 
   .footer__col h4 {
@@ -1009,7 +999,7 @@
     <a href="#meet">Meet Isaac</a>
   </div>
   <a href="#top" class="nav__brand">
-    <img src="logo-blue.png" alt="Shorty's Electrical" />
+    <img src="logo-blue transparent.png" alt="Shorty's Electrical" />
   </a>
   <div class="nav__right">
     <a href="tel:3852076270">385-207-6270</a>
@@ -1277,8 +1267,9 @@
 <footer>
   <div class="footer__grid">
     <div>
-      <div class="footer__brand">Shorty's</div>
-      <div class="footer__tag">Electrical Services</div>
+      <a href="#top" class="footer__brand">
+        <img src="logo-blue transparent.png" alt="Shorty's Electrical" />
+      </a>
     </div>
     <div class="footer__col">
       <h4>Company</h4>
