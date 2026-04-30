@@ -1292,35 +1292,38 @@
       <a href="tel:3852076270" class="btn btn--primary">Or Call: (385) 207-6270</a>
     </div>
 
-    <form class="quote-form reveal" onsubmit="handleSubmit(event)">
+    <form class="quote-form reveal" action="https://formspree.io/f/isaac@shortyselectrical.com" method="POST">
+      <input type="hidden" name="_subject" value="New Quote Request from Shorty's Website" />
+      <input type="hidden" name="_next" value="https://huntingtanner-byte.github.io/Shortys-Electrical/#quote" />
+
       <div class="quote-form__head">Get A Free Quote</div>
       <div class="quote-form__sub">It only takes a minute</div>
 
       <div class="quote-form__row quote-form__row--double">
         <div>
           <label class="quote-form__label" for="fname">First Name</label>
-          <input class="quote-form__input" type="text" id="fname" name="fname" required />
+          <input class="quote-form__input" type="text" id="fname" name="First Name" required />
         </div>
         <div>
           <label class="quote-form__label" for="lname">Last Name</label>
-          <input class="quote-form__input" type="text" id="lname" name="lname" required />
+          <input class="quote-form__input" type="text" id="lname" name="Last Name" required />
         </div>
       </div>
 
       <div class="quote-form__row quote-form__row--double">
         <div>
           <label class="quote-form__label" for="phone">Phone</label>
-          <input class="quote-form__input" type="tel" id="phone" name="phone" required placeholder="(385) 555-0123" />
+          <input class="quote-form__input" type="tel" id="phone" name="Phone" required placeholder="(385) 555-0123" />
         </div>
         <div>
           <label class="quote-form__label" for="zip">Zip</label>
-          <input class="quote-form__input" type="text" id="zip" name="zip" placeholder="84660" />
+          <input class="quote-form__input" type="text" id="zip" name="Zip Code" placeholder="84660" />
         </div>
       </div>
 
       <div class="quote-form__row">
         <label class="quote-form__label" for="type">What Do You Need?</label>
-        <select class="quote-form__select" id="type" name="type" required>
+        <select class="quote-form__select" id="type" name="Job Type" required>
           <option value="">Select One</option>
           <option>Residential / Service Call</option>
           <option>Residential / Remodel</option>
@@ -1334,7 +1337,7 @@
 
       <div class="quote-form__row">
         <label class="quote-form__label" for="notes">Tell Us What's Up</label>
-        <textarea class="quote-form__textarea" id="notes" name="notes" placeholder="Breaker keeps tripping in the kitchen..."></textarea>
+        <textarea class="quote-form__textarea" id="notes" name="Details" placeholder="Breaker keeps tripping in the kitchen..."></textarea>
       </div>
 
       <button type="submit" class="quote-form__submit">Send My Request</button>
@@ -1415,21 +1418,6 @@
   }
   function nextReview() { idx = (idx + 1) % reviews.length; renderReview(); }
   function prevReview() { idx = (idx - 1 + reviews.length) % reviews.length; renderReview(); }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    const f = e.target;
-    const body =
-`Hi Isaac, request from the Shorty's website:
-
-Name: ${f.fname.value} ${f.lname.value}
-Phone: ${f.phone.value}
-Zip: ${f.zip.value || '—'}
-Job: ${f.type.value}
-
-Notes: ${f.notes.value || '—'}`;
-    window.location.href = `sms:3852076270?&body=${encodeURIComponent(body)}`;
-  }
 </script>
 
 </body>
