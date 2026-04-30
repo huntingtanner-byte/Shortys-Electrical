@@ -123,34 +123,14 @@
     position: relative;
     overflow: hidden;
     min-height: 480px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
-  .hero__photo-placeholder {
+  .hero__photo-img {
     position: absolute;
     inset: 0;
-    background:
-      linear-gradient(135deg, rgba(45, 108, 223, 0.18) 0%, rgba(15, 31, 58, 0.5) 60%),
-      repeating-linear-gradient(45deg, rgba(243, 234, 215, 0.04) 0 2px, transparent 2px 14px),
-      var(--navy-deep);
-  }
-  .hero__photo-frame {
-    position: relative;
-    z-index: 2;
-    width: 80%;
-    max-width: 480px;
-    aspect-ratio: 4/5;
-    background: var(--cream);
-    border-radius: 50% / 22%;
-    display: grid;
-    place-items: center;
-    padding: 40px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.35);
-  }
-  .hero__photo-frame img {
-    width: 75%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
   .hero__photo-caption {
     position: absolute;
@@ -423,20 +403,12 @@
     position: relative;
     box-shadow: 0 24px 60px var(--paper-shadow);
   }
-  .services__photo-placeholder {
-    position: absolute; inset: 0;
-    background:
-      linear-gradient(135deg, rgba(45, 108, 223, 0.2), rgba(15, 31, 58, 0.55)),
-      repeating-linear-gradient(45deg, rgba(243, 234, 215, 0.04) 0 2px, transparent 2px 14px),
-      var(--navy-deep);
-    display: grid;
-    place-items: center;
-    color: var(--cream);
-    text-align: center;
-    padding: 40px;
+  .services__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
-  .services__photo-placeholder strong { display: block; font-family: 'Caveat Brush'; font-size: 28px; margin-bottom: 8px; }
-  .services__photo-placeholder span { font-family: 'Big Shoulders Display'; font-weight: 800; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
 
   .services__heading {
     text-align: left;
@@ -631,25 +603,17 @@
   .meet__photo {
     aspect-ratio: 4/5;
     background: var(--navy-deep);
-    border-radius: 50% / 22%;
+    border-radius: 24px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 24px 60px var(--paper-shadow);
   }
-  .meet__photo-placeholder {
-    position: absolute; inset: 0;
-    background:
-      linear-gradient(135deg, rgba(45, 108, 223, 0.18), rgba(15, 31, 58, 0.55)),
-      repeating-linear-gradient(45deg, rgba(243, 234, 215, 0.04) 0 2px, transparent 2px 14px),
-      var(--navy-deep);
-    display: grid;
-    place-items: center;
-    text-align: center;
-    color: var(--cream);
-    padding: 40px;
+  .meet__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
   }
-  .meet__photo-placeholder strong { display: block; font-family: 'Caveat Brush'; font-size: 30px; margin-bottom: 6px; }
-  .meet__photo-placeholder span { font-family: 'Big Shoulders Display'; font-weight: 800; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.7; }
 
   .meet__heading {
     font-family: 'Big Shoulders Display', sans-serif;
@@ -1009,11 +973,8 @@
 
 <section class="hero" id="top">
   <div class="hero__photo">
-    <div class="hero__photo-placeholder"></div>
+    <img src="Van.PNG" alt="Shorty's Electrical work van" class="hero__photo-img" />
     <div class="hero__photo-tag">Now Booking Utah + Salt Lake County</div>
-    <div class="hero__photo-frame">
-      <img src="assets/logo-blue.png" alt="Shorty's Electrical badge logo" />
-    </div>
     <div class="hero__photo-caption">family owned + locally run</div>
   </div>
 
@@ -1051,7 +1012,7 @@
 
     <div class="hello__photo reveal">
       <div class="hello__photo-placeholder">
-        Isaac, Madi &amp; their daughter out front of the work van.
+        Isaac, Melina &amp; their daughter out front of the work van.
         <span>// Replace with real family + van photo</span>
       </div>
     </div>
@@ -1062,10 +1023,7 @@
   <div class="container">
     <div class="services__inner">
       <div class="services__photo reveal">
-        <div class="services__photo-placeholder">
-          <strong>On the job</strong>
-          <span>// Replace with real action shot</span>
-        </div>
+        <img src="On the Job.JPG" alt="Shorty's Electrical on the job" />
       </div>
       <div class="reveal">
         <h2 class="section-title section-title--outline services__heading">Our Services</h2>
@@ -1153,10 +1111,7 @@
 <section class="meet" id="meet">
   <div class="meet__inner">
     <div class="meet__photo reveal">
-      <div class="meet__photo-placeholder">
-        <strong>Meet Isaac</strong>
-        <span>// Portrait of Isaac in branded shirt</span>
-      </div>
+      <img src="Meet Isaac.JPG" alt="Isaac Graves, owner of Shorty's Electrical" />
     </div>
     <div class="reveal">
       <h2 class="meet__heading">Meet Isaac.</h2>
@@ -1164,7 +1119,7 @@
         Hi, I'm Isaac Graves. Shorty's Electrical is my family's small business, and I'm the guy you'll meet on the job. I spent six years running crews on everything from single-family homes to industrial sites, and I've seen what works on the tools and what doesn't.
       </p>
       <p class="meet__copy">
-        I built Shorty's with my wife Madi, and I partnered with a Master Electrician carrying 20+ years in the trade so every job gets done by people who actually know what they're doing. No surprise upcharges. No half-finished work. Just clean, code-compliant electrical, on time, every time.
+        I built Shorty's with my wife Melina, and I partnered with a Master Electrician carrying 20+ years in the trade so every job gets done by people who actually know what they're doing. No surprise upcharges. No half-finished work. Just clean, code-compliant electrical, on time, every time.
       </p>
       <p class="meet__copy">
         Need a quote? Let's get to work.
