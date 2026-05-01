@@ -532,7 +532,7 @@
   @media (max-width: 520px) {
     .promise { padding: 80px 16px 60px; }
     .promise::before { height: 50px; }
-    .promise__avatar { width: 80px; height: 80px; margin-bottom: 20px; }
+    .promise__avatar { width: 80px; margin-bottom: 20px; }
     .promise__title { font-size: clamp(32px, 10vw, 48px); -webkit-text-stroke: 1.5px var(--cream); text-shadow: 3px 3px 0 var(--blue); margin-bottom: 16px; }
     .promise__sub { font-size: 15px; margin-bottom: 48px; }
     .promise__grid { gap: 40px; }
@@ -545,19 +545,14 @@
 
   .promise__inner { position: relative; z-index: 1; }
   .promise__avatar {
-    width: 110px; height: 110px;
-    border-radius: 50%;
-    background: var(--cream);
-    border: 3px solid var(--blue);
+    width: 120px;
+    height: auto;
     margin: 0 auto 24px;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    position: relative;
+    display: block;
   }
-  .promise__avatar svg {
-    width: 70%; height: 70%;
-    color: var(--navy);
+  .promise__avatar img {
+    width: 100%;
+    height: auto;
   }
 
   .promise__title {
@@ -1177,7 +1172,7 @@
 <section class="promise">
   <div class="promise__inner container">
     <div class="promise__avatar">
-      <img src="bolt-yellow (1).png" alt="Shorty's Electrical bolt" style="width: 100%; height: 100%; object-fit: contain;" />
+      <img src="bolt-yellow (1).png" alt="Shorty's Electrical bolt" />
     </div>
     <h2 class="promise__title">The Shorty's Promise</h2>
     <p class="promise__sub">
